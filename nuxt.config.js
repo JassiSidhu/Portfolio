@@ -1,59 +1,65 @@
-
 export default {
-  mode: 'universal',
+  mode: "universal",
   /*
-  ** Headers of the page
-  */
+   ** Headers of the page
+   */
   head: {
-    title:'Jaswinder Sidhu',
+    title: "Jaswinder Sidhu",
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      {
+        hid: "description",
+        name: "description",
+        content: process.env.npm_package_description || ""
+      }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/Letter_J.png' }
+      { rel: "icon", type: "image/x-icon", href: "/Letter_J.png" },
+      {
+        rel: "stylesheet",
+        href:
+          "https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+      }
     ],
     script: [
-      { src: 'https://code.jquery.com/jquery-3.3.1.min.js' }
+      { src: "https://code.jquery.com/jquery-3.3.1.min.js" },
+      {
+        src:
+          "https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"
+      }
     ]
   },
   /*
-  ** Customize the progress-bar color
-  */
-  loading: { color: '#fff' },
+   ** Customize the progress-bar color
+   */
+  loading: { color: "#fff" },
   /*
-  ** Global CSS
-  */
-  css: [
-    '~/assets/main.css'
-  ],
+   ** Global CSS
+   */
+  css: ["~/assets/main.scss"],
   /*
-  ** Plugins to load before mounting the App
-  */
-  plugins: [
-    { src: '~/plugins/main', ssr: false }
-  ],
+   ** Plugins to load before mounting the App
+   */
+  plugins: [{ src: "~/plugins/main", ssr: false }],
   /*
-  ** Nuxt.js dev-modules
-  */
-  buildModules: [
-  ],
+   ** Nuxt.js dev-modules
+   */
+  buildModules: [],
   /*
-  ** Nuxt.js modules
-  */
+   ** Nuxt.js modules
+   */
   modules: [
     // Doc: https://bootstrap-vue.js.org
-    'bootstrap-vue/nuxt',
+    "bootstrap-vue/nuxt"
   ],
   /*
-  ** Build configuration
-  */
+   ** Build configuration
+   */
   build: {
     /*
-    ** You can extend webpack config here
-    */
-    extend (config, ctx) {
-    }
+     ** You can extend webpack config here
+     */
+    extend(config, ctx) {}
   }
-}
+};
