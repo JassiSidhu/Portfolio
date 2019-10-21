@@ -11,7 +11,7 @@
               :style="{ backgroundColor: item.color}"
             >
               <b-card-text>{{ item.heading }}</b-card-text>
-              <b-button variant="info" pill block class="displayOnHover d-none" href>View Detail</b-button>
+              <b-button variant="info" pill block class="displayOnHover d-none" href>View</b-button>
             </b-card>
           </a>
           <a :data-fancybox="'gallery' + index" :href="'/img/'+ item.linkImg2"></a>
