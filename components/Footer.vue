@@ -1,41 +1,21 @@
 <template>
-  <div class="media">
-  <a href="https://www.linkedin.com/in/jaswinder-sidhu-8237537a" target="_blank"> 
-  <img src="/img/linkedin_logo.png" class="medialogo" />
-  </a>
-  <a href="https://github.com/JassiSidhu" target="_blank"> 
-  <img src="/img/GitHub-Mark.png" class="medialogo" />
-  </a>
-</div>
+  <b-container class="fullWidthContainerFooter my-5">
+    <b-container>
+      <b-row>
+        <b-col cols="1" offset="5">
+          <a href="https://www.linkedin.com/in/jaswinder-sidhu" target="_blank">
+            <b-img src="/img/linkedin_logo.png" fluid />
+          </a>
+        </b-col>
+        <b-col cols="1">
+          <a href="https://github.com/JassiSidhu" target="_blank">
+            <b-img src="/img/GitHub-Mark.png" fluid />
+          </a>
+        </b-col>
+      </b-row>
+    </b-container>
+  </b-container>
 </template>
 
 <style>
-.medialogo
-{
-  height:50px;
-}
-.media
-{
-  width:100%;
-  text-align:center;
-  margin:auto;
-}
-
-@keyframes turn {
-  100% {
-    transform: rotateX(0deg);
-  }
-}
-
-@keyframes godown {
-  100% {
-    top: 180px;
-  }
-}
-
-@keyframes goright {
-  100% {
-    left: 70px;
-  }
-}
 </style>

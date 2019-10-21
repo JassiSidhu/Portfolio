@@ -31,21 +31,21 @@ export default {
           heading: "PHP | MySQL | HTML | CSS",
           linkImg1: "ERP1.png",
           linkImg2: "ERP2.png",
-          color: "#fff"
+          color: "#b3ffc5"
         },
         {
           title: "Student Registration Portal",
           heading: "AngularJs | MongoDB | Bootstrap",
           linkImg1: "portal1.png",
           linkImg2: "portal2.png",
-          color: "#fff"
+          color: "#ec8d96"
         },
         {
           title: "Interactive Web Browser Game",
-          heading: " ",
+          heading: "Typescript | HTML | CSS | Adobe",
           linkImg1: "game2.png",
           linkImg2: "game3.png",
-          color: "#fff"
+          color: "#c7b57e"
         }
       ]
     };

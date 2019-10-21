@@ -29,7 +29,7 @@
     </section>
 
     <section id="skills" class="pt-5">
-      <b-container class="fullWidthContainer">
+      <b-container class="fullWidthContainer mb-5">
         <b-container>
           <b-row>
             <b-col>
@@ -148,12 +148,30 @@
     </section>
 
     <section id="projects" class="pt-5">
+      <b-container class="fullWidthContainer mb-5">
+        <b-container>
+          <b-row>
+            <b-col>
+              <h1>Projects</h1>
+            </b-col>
+          </b-row>
+        </b-container>
+      </b-container>
       <b-container>
         <Projects />
       </b-container>
     </section>
 
     <section id="contact" class="py-5">
+      <b-container class="fullWidthContainer mb-5">
+        <b-container>
+          <b-row>
+            <b-col>
+              <h1>Contact</h1>
+            </b-col>
+          </b-row>
+        </b-container>
+      </b-container>
       <b-container>
         <b-card>
           <b-form @submit="onSubmit">
@@ -199,16 +217,19 @@
         </b-card>
       </b-container>
     </section>
+    <Footer />
   </div>
 </template>
 
 <script>
+import Footer from "~/components/Footer.vue";
 import Projects from "~/components/Projects.vue";
 
 export default {
   layout: "default",
   components: {
-    Projects
+    Projects,
+    Footer
   },
   data() {
     return {
