@@ -29,6 +29,15 @@
     </section>
 
     <section id="skills" class="pt-5">
+      <b-container class="fullWidthContainer">
+        <b-container>
+          <b-row>
+            <b-col>
+              <h1>Skills</h1>
+            </b-col>
+          </b-row>
+        </b-container>
+      </b-container>
       <b-container>
         <slick :options="options">
           <b-card title="Programming Languages and Markups" style="max-width: 100%;" class="mb-2">
@@ -148,34 +157,41 @@
       <b-container>
         <b-card>
           <b-form @submit="onSubmit">
-            <div class="input-group1">
-              Email Address:
-              <b-form-input
-                id="input-1"
-                v-model="form.email"
-                type="email"
-                required
-                placeholder="abc@xyz.com"
-              ></b-form-input>
-            </div>
-
-            <div class="input-group2">
-              Your name:
-              <b-form-input id="input-2" v-model="form.name" required placeholder="Enter name"></b-form-input>
-            </div>
-            <br />
-            <div class="input-group3">
-              Message:
-              <br />
-              <b-textarea
-                id="input-3"
-                v-model="form.msg"
-                required
-                placeholder="Message here"
-                rows="5"
-              ></b-textarea>
-            </div>
-
+            <b-row>
+              <b-col md="6">
+                <b-form-group id="input-group-1" label="Email address:" label-for="input-1">
+                  <b-form-input
+                    id="input-1"
+                    v-model="form.email"
+                    type="email"
+                    required
+                    placeholder="Enter email"
+                  ></b-form-input>
+                </b-form-group>
+              </b-col>
+              <b-col md="6">
+                <b-form-group id="input-group-1" label="Your name:" label-for="input-1">
+                  <b-form-input
+                    id="input-1"
+                    v-model="form.name"
+                    type="text"
+                    required
+                    placeholder="Enter name"
+                  ></b-form-input>
+                </b-form-group>
+              </b-col>
+              <b-col md="12">
+                <b-form-group id="input-group-1" label="Message:" label-for="input-1">
+                  <b-textarea
+                    id="input-3"
+                    v-model="form.msg"
+                    required
+                    placeholder="Message here"
+                    rows="5"
+                  ></b-textarea>
+                </b-form-group>
+              </b-col>
+            </b-row>
             <div class="submitBTN">
               <b-button type="submit">Submit</b-button>
             </div>
@@ -210,7 +226,25 @@ export default {
       methods: {
         onSubmit(evt) {
           evt.preventDefault();
-          alert(JSON.stringify(this.form));
+          console.log(JSON.stringify(this.form));
+          http
+            .request({
+              url: "http://jaswinder-sidhu.com/sendEmail.php",
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              content: JSON.stringify({
+                username: "username",
+                password: "password"
+              })
+            })
+            .then(
+              response => {
+                var result = response.content.toJSON();
+              },
+              error => {
+                console.error(error);
+              }
+            );
         }
       }
     };

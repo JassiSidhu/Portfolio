@@ -20,6 +20,18 @@ export default {
         rel: "stylesheet",
         href:
           "https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+      },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css?family=Srisakdi&display=swap"
+      },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css?family=Poiret+One&display=swap"
+      },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css?family=Poiret+One&display=swap"
       }
     ],
     script: [
